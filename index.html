@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      
+    <div id="header">
+      <div class="gird">       
+        <ul id="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">content</a></li>
+            <li><a href="">team </a> </li>
+            <li>
+                <a href=""> More 
+                    <i class="arrow-down fas fa-chevron-down"></i>
+                </a>
+                <ul class="subnav">
+                    <li><a href="">page1</a></li>
+                    <li><a href="">page2</a></li>
+                    <li><a href="">page3</a></li>
+                </ul>
+            </li>
+            <i class="search-btn fas fa-search"></i>
+       <div id="nav-ipad">
+        <i class="menu fas fa-bars"></i>
+       </div>
+        </ul>
+      </div>
+    </div>
+    <div id="slider">
+      <div id="text-content">
+          <h1>Newyork</h1>
+  
+      </div>
+    </div>
+    <div id="content">
+        <div class="content-section"> 
+  
+          <p class="subhead">We love music</p>
+          <p class="about">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div id="ticket-box">
+            <div class="first-box">
+              <p class="name">name</p>
+                <img src="https://www.w3schools.com/w3css/img_la.jpg"  data-aos="fade-down">
+            </div>
+            <div class="first-box">
+              <p class="name">name</p>
+                <img class="content-box js-login" src="https://www.w3schools.com/w3css/img_la.jpg">
+            </div>
+            <div class="first-box">
+              <p class="name">name</p>
+                <img src="https://www.w3schools.com/w3css/img_la.jpg">
+            </div>
+        <div class="back-to-top"><a href="#">.
+
+        </a></div>
+        </div>
+      
+        </div>
+        <button class="content-box js-login">Login Here</button>
+        <button class="content-box js-login c"><i class="fas fa-bars"></i></button>
+            <div class="modal">
+                <div class="modal-cointainer js-modal"  data-aos="fade-down">
+                  <div id="modal-header">
+                    <div class="modal-close"> 
+                    <i class="close fas fa-times"></i>
+                  </div>
+                    <h1 id="header-text">Login</h1>
+                  </div>
+                  <div id="modal-body">
+                    <label for="quanity" class="modal-label">Free trails 1st login</label>
+                    <input id="quanity" class="input-btn"type="text" placeholder="email">
+                    <label for="quanity-2" class="modal-label">Enter your password</label>
+                    <input id="quanity-2" class="input-btn"type="password" placeholder="password">
+                  </div>
+                  <div id="footer-modal">
+                    <input type="button" id="button-btn" value="Submit">
+                    <h1 id="footer-text">Forgot password</h1>
+                  </div>
+                </div>
+            </div>
+            <button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+            <script>
+                 const logins = document.querySelectorAll('.js-login')
+                 const modal  = document.querySelector('.modal')
+                 const modalclose  = document.querySelector('.modal-close')
+                 function showlogin() {
+                  alert(check2[check])
+                 }
+                 function hidelogin() {
+                  modal.classList.remove('open')
+                 }
+                 var myUser = [
+              {
+          name:'camduong',
+        password:321,
+        coin:129,
+        bonus: ['5 coin','3 coin','7 coin','9 coin']
+              },
+           {
+        name:'camduong',
+        password:321,
+        coin:130
+        },
+               {
+        name:'camduong',
+        password:321,
+        coin:120
+            },
+    {
+        name:'camduong',
+        password:321,
+        coin:150
+    }
+     ]
+
+
+var check = Math.floor(Math.random() * 4)
+var check2 = myUser[0].bonus
+console.log(check2[check]);
+                 for (const login of logins){
+                   login.addEventListener('click',showlogin)
+                 }
+                 modalclose.addEventListener('click',hidelogin)
+            </script>
+            <script>
+              AOS.init({
+                   offset: 400, 
+                   delay: 0, 
+                   duration: 1000 
+                 });
+           </script>
+           <script>
+           
+            const toTop = document.querySelector('.back-to-top')
+            window.addEventListener('scroll',() => {
+              if (window.pageYOffset > 100){
+                toTop.classList.add('active')
+              }else{
+                toTop.classList.remove('active')
+              }
+            })
+         
+           </script>
+         <script>
+            var coll = document.getElementsByClassName("collapsible");
+var i;
+
+         </script>
+
+</head>
+<body>
+   
