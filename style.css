@@ -1,0 +1,335 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#header
+{
+    height: 46px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav 
+{
+    cursor: pointer;
+}
+#nav > li 
+{
+    display: inline-block;
+    line-height: 45px;
+    position: relative;
+}
+
+#nav > li > a 
+{
+   text-decoration: none;
+   color: #fff;
+   padding: 17px;
+   text-transform: uppercase;
+   font-weight: 600;
+}
+#nav li:hover .subnav 
+{
+    display: block;
+}
+#nav > li:hover 
+{
+    background: coral;
+}
+ #nav .arrow-down
+{
+    font-size: 15px;
+}
+#nav .search-btn:hover
+{
+    background: coral;
+}
+#nav .search-btn
+{
+    color: #fff;
+    float: right;
+    padding: 16px;
+    
+}
+#nav .subnav
+{
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    min-width: 160px;
+    top: 105%;
+}
+
+.subnav li 
+{
+    list-style: none;
+    line-height: 50px;
+   
+}
+.subnav li a 
+{
+    text-decoration: none;
+    color: #000;
+    padding:0px 0px 0px 20px ;
+}
+.subnav li a:hover 
+{
+    background: coral;
+    display: block;
+    color: #fff;
+}
+#slider
+{
+    background-image:url('https://www.w3schools.com/w3css/img_la.jpg') ;
+    padding-top: 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 46px;
+    position: relative;
+}
+#text-content
+{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    text-align:center ;
+    width: 100%;
+}
+#content
+{
+    height: 1576px;
+    position: relative;
+}
+#content .content-section
+{
+    max-width:800px;
+   margin-left: auto;
+   margin-right: auto;
+   height: 700px;
+}
+#content .heading-section{
+   font-size: 30px;
+   text-align: center;
+   margin-top: 60px;
+   margin-left: 1100px;
+}
+#content .subhead
+{
+   font-size: 20px;
+   text-align: center;
+   margin-top: 20px;
+}
+#content .about
+{
+    margin-top: 20px;
+    text-align: justify;
+   
+}
+#ticket-box 
+{
+
+    padding: 32px;
+    position: absolute;
+
+} 
+    
+.first-box 
+{
+    float: left;
+    margin-left: -40px;
+    margin-right: 100px;
+}
+.name 
+{
+    text-align: center;
+    margin-left: -50px;
+}
+.first-box img
+{
+    width: 300px;
+     height: 300px;
+     margin-left: -50px;
+  
+     padding: 42px;
+}
+.modal 
+{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background: #0004;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: modalfadeIn  ease;
+}
+.modal-cointainer
+{
+    background: #fff;
+    width: 800px;
+    min-height: 200px;
+    max-width: calc(100%-32px);
+    animation: modalfadeIn  ease;
+}
+#modal-header 
+{
+    position: relative;
+    height: 130px;
+    background: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal-header .modal-close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+#modal-header .modal-close:hover
+{
+    background: coral;
+}
+#modal-header #header-text 
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#modal-boday 
+{
+    padding: 20px;
+}
+#modal-body .modal-label
+{
+   display: block;
+   padding: 20px;
+   margin-top: 15px;
+}
+#modal-body .input-btn
+{
+   display: block;
+   padding: 10px;
+   margin-left: 20px;
+   width: 90%;
+   
+}
+#footer-modal
+{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#button-btn
+{
+    padding: 13px;
+    background: #009688;
+    width: 20%;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+}
+#footer-text
+{
+    font-size: 11px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    padding: 15px;
+}
+.content-box
+{
+    text-align: center;
+    padding: 15px;
+    background: none;
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    border: none;
+}
+.modal.open 
+{
+  display: flex;
+}
+.c {
+    margin-left: 200px;
+}
+@keyframes modalfadeIn {
+    from {
+        transform: translatey(-100px);
+    }to {
+        transform: translateY(0);
+    }
+}
+@media(max-width:600px){
+    #nav li {
+        display: none;
+    }
+    #nav-ipad i {
+        display: block !important;
+    }
+}
+
+#nav-ipad i
+{
+    position: absolute;
+    color: #fff;
+    top: 0%;
+    padding: 20px;
+    display: none;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+.back-to-top 
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #009688;
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+.back-to-top.active 
+{
+    pointer-events: auto;
+    bottom: 32px;
+   display: block;
+   animation: mymov linear 0.3s;
+}
+@keyframes mymove {
+    from {
+        transform: translateY(-20%);
+    }to {
+        transform: translateY(0);
+    }
+}
+.gird 
+{
+    width: 1200px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mySlides {display:none;}
